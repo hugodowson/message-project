@@ -7,7 +7,7 @@ app.get('/posts', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  const {mode, challenge, verify_token} = req.query.hub
+  console.log(req.query)
 
   res.send(`${mode}`)
 })
