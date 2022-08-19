@@ -9,7 +9,7 @@ app.get('/posts', (req, res) => {
 app.get('/', (req, res) => {
   console.log(req.query)
 
-  res.send(`${mode}`)
+  res.send('API')
 })
 
 app.listen(process.env.PORT || 3001, () => console.log("server is running"))
