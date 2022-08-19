@@ -8,7 +8,7 @@ app.get('/verify-webhook', (req, res) => {
   const challenge = req.query['hub.challenge']
   const token = req.query['hub.verify_token']
 
-  if(mode === 'subscribe') {
+  if(mode === 'subscribe' && token === process.env.MY_VERIFY_TOKEN) {
     res.status(200).send(challenge)
   } else {
     res.sendStatus(400)
