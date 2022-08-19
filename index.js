@@ -7,7 +7,7 @@ app.get('/posts', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  res.send('API is running')
+  res.send(req.params)
 })
 
 app.listen(process.env.PORT || 3001, () => console.log("server is running"))
