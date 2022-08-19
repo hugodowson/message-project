@@ -7,7 +7,9 @@ app.get('/posts', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  res.send(req.params)
+  const {mode, challenge, verify_token} = req.query.hub
+
+  res.send(`${mode}`)
 })
 
 app.listen(process.env.PORT || 3001, () => console.log("server is running"))
